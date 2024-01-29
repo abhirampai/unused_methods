@@ -1,8 +1,6 @@
 # DeprecatedMethods
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/deprecated_methods`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Remove deprecated methods from rails/ruby application
 
 ## Installation
 
@@ -18,7 +16,7 @@ And then run the checker:
     
     $ bundle exec deprecated_methods check app/**/*.rb
 
-## Usage
+## Usage in development
 
 Clone the repo and follow the steps
 
