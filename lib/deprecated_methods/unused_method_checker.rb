@@ -1,6 +1,7 @@
 require 'parser/current'
 require 'rugged'
 require 'pry'
+require 'erb'
 
 
 module DeprecatedMethods
