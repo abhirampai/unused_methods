@@ -15,6 +15,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
     $ gem install deprecated_methods
 
 And then run the checker:
+    
     $ bundle exec deprecated_methods check app/**/*.rb
 
 ## Usage
