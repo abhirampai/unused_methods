@@ -4,9 +4,10 @@ Remove deprecated methods from rails/ruby application
 
 ## Installation
 
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add deprecated_methods
+Add this line to the application's Gemfile:
+```ruby
+    gem 'deprecated_methods', git: "https://github.com/abhirampai/deprecated_methods", branch: "main"
+```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
