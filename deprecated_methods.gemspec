@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "pry", "~> 0.14.2"
-  spec.add_runtime_dependency "parser", ">= 3"
+  spec.add_runtime_dependency "parser"
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
