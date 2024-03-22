@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     deprecated_methods (0.1.0)
-      parser (~> 3)
+      parser (>= 3)
 
 GEM
   remote: https://rubygems.org/
