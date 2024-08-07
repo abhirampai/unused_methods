@@ -1,4 +1,4 @@
-# DeprecatedMethods
+# Unused methods
 
 Find unused methods from rails/ruby application
 
