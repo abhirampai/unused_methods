@@ -1,6 +1,6 @@
 # DeprecatedMethods
 
-Remove deprecated methods from rails/ruby application
+Find unused methods from rails/ruby application
 
 ## Installation
 
