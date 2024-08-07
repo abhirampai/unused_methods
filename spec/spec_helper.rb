@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "deprecated_methods"
+require "unused_methods"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
