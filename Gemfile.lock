@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    deprecated_methods (0.1.0)
+    deprecated_methods (0.2.0)
       parser
       slim
 
