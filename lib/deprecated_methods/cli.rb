@@ -1,9 +1,11 @@
-require 'thor'
-require 'deprecated_methods/unused_method_checker'
+# frozen_string_literal: true
+
+require "thor"
+require "deprecated_methods/unused_method_checker"
 
 module DeprecatedMethods
-  class CLI < Thor
-    desc 'check FILES', 'Check for unused methods in Ruby files'
+  class CLI < Thor # rubocop:disable Style/Documentation
+    desc "check FILES", "Check for unused methods in Ruby files"
 
     def check(*files)
       checker = UnusedMethodChecker.new
