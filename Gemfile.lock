@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    deprecated_methods (0.2.0)
+    unused_methods (0.2.0)
       parser
       slim
 
@@ -65,11 +65,11 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (>= 1.17)
-  deprecated_methods!
   pry (>= 0.14.2)
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 1.21)
+  unused_methods!
 
 BUNDLED WITH
    2.3.26
