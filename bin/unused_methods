@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'unused_methods/cli'
+require "unused_methods/cli"
 
 UnusedMethods::CLI.start(ARGV)
