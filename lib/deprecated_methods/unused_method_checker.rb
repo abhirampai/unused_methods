@@ -114,7 +114,7 @@ module DeprecatedMethods
     def show_progress(current, total, bar_length = 50)
       current_progress = current.to_f / total
       progress = current_progress * bar_length
-      print "\r[#{"=" * progress.floor}#{" " * (bar_length - progress.floor)}] #{current_progress.round(2)}%"
+      print "\r[#{"=" * progress.floor}#{" " * (bar_length - progress.floor)}] #{(current_progress * 100).round(2)}%"
       $stdout.flush
     end
   end
