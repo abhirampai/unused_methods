@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'deprecated_methods/cli'
-
-DeprecatedMethods::CLI.start(ARGV)

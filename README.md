@@ -6,16 +6,16 @@ Find unused methods from rails/ruby application
 
 Add this line to the application's Gemfile:
 ```ruby
-    gem 'deprecated_methods', git: "https://github.com/abhirampai/deprecated_methods", branch: "main"
+    gem 'unused_methods', git: "https://github.com/abhirampai/unused_methods", branch: "main"
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install deprecated_methods
+    $ gem install unused_methods
 
 And then run the checker:
     
-    $ bundle exec deprecated_methods check app/**/*.rb
+    $ bundle exec unused_methods check app/**/*.rb
 
 ## Usage in development
 
@@ -23,15 +23,15 @@ Clone the repo and follow the steps
 
 Build the gem
 
-    $ gem build deprecated_methods.gemspec
+    $ gem build unused_methods.gemspec
 
 Install the gem
 
-    $ gem install ./deprecated_methods-0.1.0.gem
+    $ gem install ./unused_methods-0.1.0.gem
 
 Run the executables
    
-    $ bin/deprecated_methods check app/**/*.rb
+    $ bin/unused_methods check app/**/*.rb
 
 ## Development
 
@@ -41,7 +41,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/abhirampai/deprecated_methods. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/deprecated_methods/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/abhirampai/unused_methods. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/abhirampai/unused_methods/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -49,4 +49,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the DeprecatedMethods project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/deprecated_methods/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the UnusedMethods project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/abhirampai/unused_methods/blob/main/CODE_OF_CONDUCT.md).

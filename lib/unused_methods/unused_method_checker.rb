@@ -5,7 +5,7 @@ require "pry"
 require "erb"
 require "slim"
 
-module DeprecatedMethods
+module UnusedMethods
   class UnusedMethodChecker # rubocop:disable Style/Documentation
     attr_accessor :defined_methods, :invoked_methods, :touched_files
 

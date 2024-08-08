@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/deprecated_methods/version"
+require_relative "lib/unused_methods/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "deprecated_methods"
-  spec.version = DeprecatedMethods::VERSION
+  spec.name = "unused_methods"
+  spec.version = UnusedMethods::VERSION
   spec.authors = ["Abhiram Pai"]
   spec.email = ["abhirampai1999@gmail.com"]
 
@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "parser"
   spec.add_dependency "slim"
+  spec.add_dependency "thor"
 
   spec.add_development_dependency "bundler", ">= 1.17"
   spec.add_development_dependency "pry", ">= 0.14.2"
