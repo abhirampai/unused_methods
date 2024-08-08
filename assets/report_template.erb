@@ -116,10 +116,10 @@
             <div id="editorjs"></div>
           </div>
           <div class="flex justify-end pt-2">
-            <a
+            <button
               class="focus:outline-none open-in-vscode px-4 bg-gray-400 p-3 rounded-lg text-black hover:bg-gray-300">
               Open file in vscode
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -127,6 +127,15 @@
   </body>
   <script>
     const modal = document.querySelector('.main-modal');
+    const closeButton = document.querySelectorAll('.modal-close');
+
+		const modalClose = () => {
+			modal.classList.remove('fadeIn');
+			modal.classList.add('fadeOut');
+			setTimeout(() => {
+				modal.style.display = 'none';
+			}, 500);
+		}
 
 		const openModal = (header, content, file) => {
       const editorjs = document.getElementById("editorjs")
@@ -148,7 +157,20 @@
       }
 
       const openVsCodeBtn = modal.querySelectorAll('.open-in-vscode');
-      openVsCodeBtn.href = `vscode://file/${File.expand_path(file, __dir__)}:#${searchCursor.from()}`
+      openVsCodeBtn.onclick = () => window.open(`vscode://file/${File.expand_path(file, __dir__)}:#${searchCursor.from()}`, '_blank');
+		}
+
+    for (let i = 0; i < closeButton.length; i++) {
+
+			const elements = closeButton[i];
+
+			elements.onclick = (e) => modalClose();
+
+			modal.style.display = 'none';
+
+			window.onclick = function (event) {
+				if (event.target == modal) modalClose();
+			}
 		}
   </script>
 </html>
