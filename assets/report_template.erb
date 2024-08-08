@@ -71,7 +71,7 @@
                     #
                   </th>
                   <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                    Missing method
+                    Unused method
                   </th>
                   <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                     Found in file
@@ -86,7 +86,7 @@
                       <td class="text-sm text-gray-900 font-lighter px-6 py-4 whitespace-nowrap">
                         <%= method[0] %>
                       </td>
-                      <td class="text-sm text-gray-900 font-lighter px-6 py-4 whitespace-nowrap hover:text-blue-600 hover:underline hover:cursor" onclick="openModal('<%=method[0]%>', '<%= ERB::Util.url_encode(File.read(method[1]))%>')">
+                      <td class="text-sm text-gray-900 font-lighter px-6 py-4 whitespace-nowrap hover:text-blue-600 hover:underline hover:cursor" onclick="openModal('<%=method[0]%>', '<%= ERB::Util.url_encode(File.read(method[1]))%>', '<%=File.expand_path(method[1], __dir__)%>')">
                         <%= method[1] %>
                       </td>
                     </tr>
@@ -117,8 +117,8 @@
           </div>
           <div class="flex justify-end pt-2">
             <button
-              class="focus:outline-none modal-close px-4 bg-gray-400 p-3 rounded-lg text-black hover:bg-gray-300">
-              Go back
+              class="focus:outline-none open-in-vscode px-4 bg-gray-400 p-3 rounded-lg text-black hover:bg-gray-300">
+              Open file in vscode
             </button>
           </div>
         </div>
@@ -127,7 +127,7 @@
   </body>
   <script>
     const modal = document.querySelector('.main-modal');
-		const closeButton = document.querySelectorAll('.modal-close');
+    const closeButton = document.querySelectorAll('.modal-close');
 
 		const modalClose = () => {
 			modal.classList.remove('fadeIn');
@@ -137,7 +137,7 @@
 			}, 500);
 		}
 
-		const openModal = (header, content) => {
+		const openModal = (header, content, file_path) => {
       const editorjs = document.getElementById("editorjs")
 			modal.classList.remove('fadeOut');
 			modal.classList.add('fadeIn');
@@ -155,9 +155,12 @@
         editor.markText(searchCursor.from(), searchCursor.to(), { className: "styled-background" })
         editor.scrollIntoView({ from: searchCursor.from(), to: searchCursor.to() })
       }
+
+      const openVsCodeBtn = modal.querySelector('.open-in-vscode');
+      openVsCodeBtn.onclick = () => window.open(`vscode://file/${file_path}:${searchCursor.from().line}:${searchCursor.from().ch}`, '_blank');
 		}
 
-		for (let i = 0; i < closeButton.length; i++) {
+    for (let i = 0; i < closeButton.length; i++) {
 
 			const elements = closeButton[i];
 
