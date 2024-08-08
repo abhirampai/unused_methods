@@ -157,7 +157,7 @@
       }
 
       const openVsCodeBtn = modal.querySelector('.open-in-vscode');
-      openVsCodeBtn.onclick = () => window.open(`vscode://file/${file_path}:#${searchCursor.from().line + 1}`, '_blank');
+      openVsCodeBtn.onclick = () => window.open(`vscode://file/${file_path}:${searchCursor.from().line}:${searchCursor.from().ch}`, '_blank');
 		}
 
     for (let i = 0; i < closeButton.length; i++) {
