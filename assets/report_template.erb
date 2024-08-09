@@ -86,7 +86,7 @@
                       <td class="text-sm text-gray-900 font-lighter px-6 py-4 whitespace-nowrap">
                         <%= method[0] %>
                       </td>
-                      <td class="text-sm text-gray-900 font-lighter px-6 py-4 whitespace-nowrap hover:text-blue-600 hover:underline hover:cursor" onclick="openModal('<%=method[0]%>', '<%= ERB::Util.url_encode(File.read(method[1]))%>', '<%=File.expand_path(method[1], __dir__)%>', '<%= UnusedMethods.prefix %>')">
+                      <td class="text-sm text-gray-900 font-lighter px-6 py-4 whitespace-nowrap hover:text-blue-600 hover:underline hover:cursor" onclick="openModal('<%=method[0]%>', '<%= ERB::Util.url_encode(File.read(method[1]))%>', '<%=File.expand_path(method[1], __dir__)%>', '<%= prefix %>')">
                         <%= method[1] %>
                       </td>
                     </tr>
