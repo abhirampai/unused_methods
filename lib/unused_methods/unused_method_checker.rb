@@ -117,5 +117,9 @@ module UnusedMethods
       print "\r[#{"=" * progress.floor}#{" " * (bar_length - progress.floor)}] #{(current_progress * 100).round(2)}%"
       $stdout.flush
     end
+
+    def prefix
+      "vscode://file/"
+    end
   end
 end
