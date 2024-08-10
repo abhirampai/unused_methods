@@ -17,6 +17,9 @@ And then run the checker:
     
     $ bundle exec unused_methods check app/**/*.rb
 
+## Features
+- Open in vscode - open the file in vscode, override the prefix in unchecked methods to open the code in prefered editor.
+
 ## Usage in development
 
 Clone the repo and follow the steps
